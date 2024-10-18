@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: test-rag4-secret-1
+  janus-idp.io/tekton: test-rag4-secret-1
+  backstage.io/kubernetes-id: test-rag4-secret-1
+  backstage.io/kubernetes-namespace: rag3-namespace 
+  app.kubernetes.io/part-of: test-rag4-secret-1
+resources: 
+- initialize-namespace.yaml
+- deployment.yaml
+- route.yaml
+- service.yaml
+- model-config.yaml
+- deployment-database.yaml
+- service-database.yaml
+- database-config.yaml
+- rhoai/

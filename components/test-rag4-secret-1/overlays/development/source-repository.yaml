@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: test-rag4-secret-1-repository
+spec:
+  url: https://github.com/fpetk/test-rag4-secret-1
